@@ -13,7 +13,7 @@ on:
 #on: [push, pull_request]
 
 env:
-  APPNAME: "rate"
+  APPNAME: "assert"
   APPS: ""                   # optional, a space separated name list.
   FROM_FOLDER: "./examples"  # or "." for building "cli"
   ENABLE_DOCKER: 0
