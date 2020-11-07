@@ -1,5 +1,18 @@
 # assert
 
+![Go](https://github.com/hedzr/assert/workflows/Go/badge.svg)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/hedzr/assert.svg?label=release)](https://github.com/hedzr/assert/releases)
+[![](https://img.shields.io/badge/go-dev-green)](https://pkg.go.dev/github.com/hedzr/assert)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/hedzr/assert)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhedzr%2Fgo-ringbuf.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhedzr%2Fassert?ref=badge_shield)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hedzr/assert)](https://goreportcard.com/report/github.com/hedzr/assert)
+[![Coverage Status](https://coveralls.io/repos/github/hedzr/assert/badge.svg?branch=master&.9)](https://coveralls.io/github/hedzr/assert?branch=master)
+<!--
+[![Build Status](https://travis-ci.org/hedzr/go-ringbuf.svg?branch=master)](https://travis-ci.org/hedzr/go-ringbuf)
+[![codecov](https://codecov.io/gh/hedzr/go-ringbuf/branch/master/graph/badge.svg)](https://codecov.io/gh/hedzr/go-ringbuf) 
+-->
+
+
 `assert` provides a set of assertion helpers for unit/bench testing in golang.
 
 `assert` is inspired by these projects:
