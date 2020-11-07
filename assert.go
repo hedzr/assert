@@ -3,6 +3,7 @@ package assert
 import (
 	"fmt"
 	"path"
+	"reflect"
 	"regexp"
 	"runtime"
 	"testing"
@@ -61,8 +62,7 @@ func Nil(t testing.TB, value interface{}) {
 //
 //    assert.NilSkip(t, err)
 func NilSkip(t testing.TB, skip int, value interface{}) {
-	b := isEqual(value, nil)
-	if b {
+	if reflect.ValueOf(value).IsNil() {
 		return
 	}
 	_, file, line, _ := runtime.Caller(skip)
@@ -81,7 +81,7 @@ func NotNil(t testing.TB, value interface{}) {
 //
 //    assert.NotNilSkip(t, 1, err)
 func NotNilSkip(t testing.TB, skip int, value interface{}) {
-	if !isEqual(value, nil) {
+	if !reflect.ValueOf(value).IsNil() {
 		return
 	}
 	_, file, line, _ := runtime.Caller(skip)
