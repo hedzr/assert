@@ -61,11 +61,13 @@ func Nil(t testing.TB, value interface{}) {
 //
 //    assert.NilSkip(t, err)
 func NilSkip(t testing.TB, skip int, value interface{}) {
-	if value != nil {
-		_, file, line, _ := runtime.Caller(skip)
-		fmt.Printf("%s:%d %v should be nil\n", path.Base(file), line, value)
-		t.FailNow()
+	b := isEqual(value, nil)
+	if b {
+		return
 	}
+	_, file, line, _ := runtime.Caller(skip)
+	fmt.Printf("%s:%d %v should be nil\n", path.Base(file), line, value)
+	t.FailNow()
 }
 
 // NotNil asserts that the specified object is not nil.
@@ -79,11 +81,12 @@ func NotNil(t testing.TB, value interface{}) {
 //
 //    assert.NotNilSkip(t, 1, err)
 func NotNilSkip(t testing.TB, skip int, value interface{}) {
-	if value != nil {
-		_, file, line, _ := runtime.Caller(skip)
-		fmt.Printf("%s:%d %v should NOT be nil\n", path.Base(file), line, value)
-		t.FailNow()
+	if !isEqual(value, nil) {
+		return
 	}
+	_, file, line, _ := runtime.Caller(skip)
+	fmt.Printf("%s:%d %v should NOT be nil\n", path.Base(file), line, value)
+	t.FailNow()
 }
 
 // NoError asserts that a function returned no error (i.e. `nil`).

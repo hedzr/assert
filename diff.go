@@ -9,7 +9,7 @@ import (
 	"github.com/sergi/go-diff/diffmatchpatch"
 )
 
-// DiffValues compares 'a' and 'b' and return its different as a text string with terminal escaped sequences.
+// DiffValues compares 'a' and 'b' and return its differences as a text string with terminal escaped sequences.
 func DiffValues(a, b interface{}) string {
 	printer := colour.String()
 	diff := diffmatchpatch.New()
@@ -33,7 +33,7 @@ func DiffValues(a, b interface{}) string {
 	return printer.String()
 }
 
-// DiffValuesDefault compares 'a' and 'b' and return its different as a text string with terminal escaped sequences.
+// DiffValuesDefault compares 'a' and 'b' and return its differences as a text string with terminal escaped sequences.
 func DiffValuesDefault(a, b interface{}) string {
 	diff := diffmatchpatch.New()
 	at := repr.String(a)
