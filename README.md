@@ -8,8 +8,8 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/hedzr/assert)](https://goreportcard.com/report/github.com/hedzr/assert)
 [![Coverage Status](https://coveralls.io/repos/github/hedzr/assert/badge.svg?branch=master&.9)](https://coveralls.io/github/hedzr/assert?branch=master)
 <!--
-[![Build Status](https://travis-ci.org/hedzr/go-ringbuf.svg?branch=master)](https://travis-ci.org/hedzr/go-ringbuf)
-[![codecov](https://codecov.io/gh/hedzr/go-ringbuf/branch/master/graph/badge.svg)](https://codecov.io/gh/hedzr/go-ringbuf) 
+[![Build Status](https://travis-ci.org/hedzr/assert.svg?branch=master)](https://travis-ci.org/hedzr/assert)
+[![codecov](https://codecov.io/gh/hedzr/assert/branch/master/graph/badge.svg)](https://codecov.io/gh/hedzr/assert) 
 -->
 
 
