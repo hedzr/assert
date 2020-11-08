@@ -20,7 +20,11 @@ func Equal(t testing.TB, expect, actual interface{}) {
 func EqualSkip(t testing.TB, skip int, expect, actual interface{}) {
 	if !isEqual(expect, actual) {
 		_, file, line, _ := runtime.Caller(skip)
-		fmt.Printf("%s:%d expecting %v, but got %v. DIFF is: %v\n", path.Base(file), line, expect, actual, DiffValues(expect, actual))
+		fmt.Printf("%s:%d expecting %v (%v), but got %v (%v). DIFF is: %v\n",
+			path.Base(file), line,
+			expect, reflect.TypeOf(expect),
+			actual, reflect.TypeOf(actual),
+			DiffValues(expect, actual))
 		t.FailNow()
 	}
 }
@@ -36,7 +40,10 @@ func NotEqual(t *testing.T, expect, actual interface{}) {
 func NotEqualSkip(t *testing.T, skip int, expect, actual interface{}) {
 	if isEqual(expect, actual) {
 		_, file, line, _ := runtime.Caller(skip)
-		fmt.Printf("%s:%d expecting %v, but got %v.\n", path.Base(file), line, expect, actual)
+		fmt.Printf("%s:%d expecting differ with %v (%v), but got %v (%v).\n",
+			path.Base(file), line,
+			expect, reflect.TypeOf(expect),
+			actual, reflect.TypeOf(actual))
 		t.FailNow()
 	}
 }
