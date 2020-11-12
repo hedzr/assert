@@ -13,7 +13,7 @@ const (
 	// AppName const
 	AppName = "assert"
 	// Version const
-	Version = "0.1.2"
+	Version = "0.1.3"
 	// VersionInt const
-	VersionInt = 0x000102
+	VersionInt = 0x000103
 )
